@@ -1,0 +1,126 @@
+// Compile
+
+@font-face {
+    font-family: 'FoundersRegular';
+    src: url(fonts/FoundersGroteskWeb-Regular.woff);
+}
+@font-face {
+    font-family: 'FoundersBold';
+    src: url(fonts/FoundersGroteskWeb-Semibold.woff);
+}
+
+#container-1 {
+  width: 100vw;
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+}
+
+
+h1 {
+    padding: 5px 15px;
+    color: white;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'FoundersBold';
+    position: absolute;
+    left: 0;
+    z-index: 10000;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 0 15px 5px 15px;
+    background: #ff3680;
+    transition: 0.4s ease-out;
+    @media (min-width: 768px) {
+
+     }
+     &.active {
+       background: #55f0b8;
+       color: #222;
+     }
+}
+
+#may-may {
+  top: 20px;
+}
+#corbyn-may {
+  top: 60px;
+}
+
+#reset-politics {
+  padding: 15px 25px;
+  color: white;
+  display: inline-block;
+  font-family: 'FoundersBold';
+  position: absolute;
+  left: 0;
+  z-index: 10000;
+  cursor: pointer;
+  font-size: 28px;
+  background: #ff3680;
+  bottom: 60px;
+  left: 0;
+  width: 220px;
+  text-align: center;
+  text-decoration: none;
+  right: 0;
+  margin: auto;
+  transition: all 0.4s ease-out;
+  &:hover {
+    background: #55f0b8;
+    color: #222;
+  }
+}
+
+
+body {
+  font-family: 'FoundersBold';
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  background: white;
+  opacity: 1;
+}
+
+#loading {
+  background: white;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  h1 {
+    background: none;
+    color: #222;
+    padding: 0;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      height: 8px;
+      background: #ff3680;
+      animation: wipe 1.5s forwards ease-out;
+    }
+  }
+}
+
+@keyframes wipe{
+  from {width: 0;}
+  to {width: 100%};
+}
+
+.doom {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
